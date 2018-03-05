@@ -42,14 +42,14 @@ Use `#get` or `#post` to access API after you created a `PeatioAPI::Client`:
   #
   client = PeatioAPI::Client.new access_key: 'your_access_key', secret_key: 'your_secret_key', endpoint: 'https://www.nlexch.com', timeout: 60
 
-  # GET private api /api/v2/orders with 'market=btccny'
-  client.get '/api/v2/orders', market: 'btccny'
+  # GET private api /api/v2/orders with 'market=ltcbtc'
+  client.get '/api/v2/orders', market: 'ltcbtc'
 
   # POST to create an order
-  client.post '/api/v2/orders', market: 'btccny', side: 'sell', volume: '0.11', price: '2955.0'
+  client.post '/api/v2/orders', market: 'ltcbtc', side: 'sell', volume: '0.11', price: '2955.0'
 
   # POST to create multiple orders at once
-  client.post '/api/v2/orders/multi', market: 'btccny', orders: [{side: 'buy', volume: '0.15', price: '2955.0'}, {side: 'sell', volume: '0.16', price: '2956'}]
+  client.post '/api/v2/orders/multi', market: 'ltcbtc', orders: [{side: 'buy', volume: '0.15', price: '2955.0'}, {side: 'sell', volume: '0.16', price: '2956'}]
 ```
 
 Check [Peatio API v2 Documents](https://www.nlexch.com/documents/api_v2) for details on Peatio API.
